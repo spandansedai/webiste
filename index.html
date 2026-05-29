@@ -1,153 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <title>
-    Spandan Sedai.
-  </title>
-
-  <meta name="description" content="">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Spandan, Developer, JavaScript, HTML & CSS" />
-  <link rel="stylesheet" href="index.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spandan Sedai | CV</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#stats" class="nav__link">Stats</a></li>
-          <li class="nav__item">
-            <a href="#aboutme" class="nav__link">About Me</a>
-          </li>
-          <li class="nav__item">
-            <a href="#getintouch" class="nav__link">Get in Touch</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Spandan Sedai</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>Purely genius by birth.</p>
-        <a href="#getintouch" class="btn btn--pink">My Contact</a>
+  <div class="page-frame">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Entry-level IT & PC Builder</p>
+        <h1>Spandan Sedai</h1>
+        <p class="subtext">+2 Graduate | IT Support | PC Building | Content Creation</p>
       </div>
-    </div>
-  </header>
+      <div class="contact-card">
+        <p><strong>Email</strong></p>
+        <p><a href="mailto:itsmespandan18@gmail.com">itsmespandan18@gmail.com</a></p>
+      </div>
+    </header>
 
-  <main role="main">
-
-    <!-- ***** Stats ***** -->
-
-    <section class="cstatus" id="cstatus">
-      <div class="row">
-        <h2>Current Status</h2>
-        <div class="stats__boxes">
-<h>
-          <p><b>Myself Spandan Sedai, self proclaimed poet with few of my writings saved on my laptop. Currently in 12th Standard at one of the most resort type college. Pure jhapali geniues.</b></p>
-          <p><b>Nothing more than playing cricket and coding one or twice a week. That's al you may scroll down.</b></p>
-</h>
-    <!-- ***** About Me ***** -->
-
-    <section class="aboutme" id="aboutme">
-      <div class="row">
-        <h2>About Me</h2>
-  <h>
-          <p><b>Born in 2064/12/06 pure jhapali geniues. Love playing cricket but currently I'm being played by cricket. Trying not to crash my brain with all the amount of coding i've been doing recently, feels like my brain is already at it's last stage.</b></p>
-          <p><b>Casually going with the flow, Currently sitting as one of the most nalayak xora of my house, soon to be a global sensation lmao.</b></p>
-  </h>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="" alt="" />
-          </div>
-        </div>
+    <section class="summary-section">
+      <div class="section-heading">
+        <h2>Profile</h2>
+        <button id="toggleDetailsBtn" class="action-btn">Show details</button>
+      </div>
+      <p class="summary-text">Motivated beginner seeking the first professional position in IT support, PC assembly, or content creation. Built PC systems for friends and ready to learn fast in a technical support environment.</p>
+      <div id="extraDetails" class="hidden">
+        <p>Experience includes hardware assembly, software installation, and troubleshooting. Comfortable working with customers to diagnose issues and support new computer setups.</p>
       </div>
     </section>
-  </main>
 
-  <!-- ***** Get in touch ***** -->
+    <section class="card-grid">
+      <article class="card">
+        <h3>Skills</h3>
+        <ul>
+          <li>PC building and hardware setup</li>
+          <li>IT support fundamentals</li>
+          <li>Basic troubleshooting</li>
+          <li>Content creation mindset</li>
+          <li>Strong willingness to learn</li>
+          <li>Customer communication</li>
+        </ul>
+      </article>
 
-  <section class="getintouch" id="getintouch">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <h><p>
-          <b>
-            Feel free to add me in my social medias:
-            <li>
-             <a href="https://www.instagram.com/spandan.18/" title="Spandan Sedai">
-               <img src="./images/instagram.svg" class="footer__social-image" alt="Spandan Sedai">
-                 - Spandan Sedai
-             </a>
-            </li>
-            <li>
-            <a href="https://www.facebook.com/spandan.sedai.18" title="Spandan Sedai">
-               <img src="./images/facebook.svg" class="footer__social-image" alt="Spandan Sedai">
-                - Spandan Sedai
-             </a>
-            </li>
-            <li>
-               <img src="./images/discord.svg" class="footer__social-image" alt="ispandan.">
-                - ispandan.
-            </li>
-            <li>
-            <a href="https://github.com/s-spandan" title="s-spandan">
-               <img src="./images/github.svg" class="footer__social-image" alt="s-spandan">
-                - s-spandan
-             </a>
-             </li>
-          </b>
-        </p></h>
+      <article class="card">
+        <h3>Experience</h3>
+        <p><strong>PC Builder / Informal Tech Support</strong></p>
+        <ul>
+          <li>Assembled PCs for 3 friends with compatible components</li>
+          <li>Installed operating systems and essential software</li>
+          <li>Tested system performance and resolved setup issues</li>
+          <li>Advised on upgrades, wiring, and component selection</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Education</h3>
+        <p><strong>+2 Graduate</strong></p>
+        <p>Completed higher secondary education with a focus on computer skills and practical learning.</p>
+      </article>
+    </section>
+
+    <section class="section-block">
+      <h2>Strengths</h2>
+      <div class="strengths-list">
+        <span>Quick learner</span>
+        <span>Responsible</span>
+        <span>Detail oriented</span>
+        <span>Team player</span>
+        <span>Open to training</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://www.facebook.com/spandan.sedai.18" title="Facebook">
-            <img src="./images/facebook.svg" class="footer__social-image" alt="Facebook">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/s-spandan" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.instagram.com/spandan.18/" title="Link to Instagram Profile">
-            <img src=".images/instagram.svg" class="footer__social-image" alt="Instagram">
-          </a>
-        </li>
-      </ul>
-      <p>
-        &copy; 2023 - Web designed by <a href="https://s-spandan.github.io/webiste/" class="link">Spandan</a>.
-      </p>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
+    <section class="section-block">
+      <h2>Interests</h2>
+      <p>IT support, PC building and maintenance, content creation, hardware troubleshooting, customer service.</p>
+    </section>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
