@@ -146,6 +146,31 @@ body {
   font-weight: 600;
 }
 
+.resume-btn {
+  background: #111111;
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.18);
+  color: #ffffff;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.resume-btn:hover,
+.resume-btn:focus-visible {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hidden {
   display: none;
 }

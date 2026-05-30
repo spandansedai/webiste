@@ -15,3 +15,17 @@ if (themeBtn) {
     themeBtn.textContent = document.body.classList.contains('dark-theme') ? 'Light theme' : 'Switch theme';
   });
 }
+
+const animatedElements = document.querySelectorAll('.animate');
+const observer = new IntersectionObserver((entries, observerRef) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-visible');
+      observerRef.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.16,
+});
+
+animatedElements.forEach(element => observer.observe(element));
