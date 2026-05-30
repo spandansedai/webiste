@@ -98,6 +98,8 @@ body {
   padding: 24px;
   background: #ffffff;
   box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12), 0 2px 6px rgba(17, 24, 39, 0.08);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .card h3,
@@ -188,6 +190,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   z-index: 10;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .card-popable:hover {
