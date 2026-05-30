@@ -147,10 +147,13 @@ body {
 }
 
 .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #111111;
   box-shadow: 0 16px 40px rgba(17, 24, 39, 0.18);
   color: #ffffff;
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .resume-btn:hover,

@@ -16,16 +16,24 @@ if (themeBtn) {
   });
 }
 
-const animatedElements = document.querySelectorAll('.animate');
-const observer = new IntersectionObserver((entries, observerRef) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate-visible');
-      observerRef.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.16,
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll('.animate');
 
-animatedElements.forEach(element => observer.observe(element));
+  if (!('IntersectionObserver' in window)) {
+    animatedElements.forEach(el => el.classList.add('animate-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, observerRef) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-visible');
+        observerRef.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.16,
+  });
+
+  animatedElements.forEach(element => observer.observe(element));
+});
