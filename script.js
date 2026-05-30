@@ -19,9 +19,11 @@ if (themeBtn) {
 // Add pop-up hover effects for card-popable elements
 document.addEventListener('DOMContentLoaded', () => {
   const cardPopables = document.querySelectorAll('.card-popable');
+  const strengthItems = document.querySelectorAll('.strength-item');
   const pageFrame = document.querySelector('.page-frame');
   const hero = document.querySelector('.hero');
   
+  // Handle card-popable hover effects
   cardPopables.forEach(card => {
     card.addEventListener('mouseenter', () => {
       pageFrame.classList.add('card-popable-active');
@@ -42,6 +44,38 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('mouseleave', () => {
       pageFrame.classList.remove('card-popable-active');
       cardPopables.forEach(c => c.classList.remove('faded-out'));
+      document.querySelectorAll('.summary-section, .section-block').forEach(section => {
+        section.classList.remove('faded-out');
+      });
+      if (hero) {
+        hero.classList.remove('faded-out');
+      }
+    });
+  });
+
+  // Handle strength-item hover effects
+  strengthItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      strengthItems.forEach(s => {
+        if (s !== item) {
+          s.classList.add('faded-out');
+        }
+      });
+      // Also fade other sections
+      cardPopables.forEach(card => card.classList.add('faded-out'));
+      document.querySelectorAll('.summary-section, .section-block').forEach(section => {
+        if (!section.querySelector('.strength-item')) {
+          section.classList.add('faded-out');
+        }
+      });
+      if (hero) {
+        hero.classList.add('faded-out');
+      }
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      strengthItems.forEach(s => s.classList.remove('faded-out'));
+      cardPopables.forEach(card => card.classList.remove('faded-out'));
       document.querySelectorAll('.summary-section, .section-block').forEach(section => {
         section.classList.remove('faded-out');
       });
