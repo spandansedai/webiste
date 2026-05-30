@@ -119,11 +119,12 @@
       const animatedElements = document.querySelectorAll('.animate');
 
       if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, observerRef) => {
+        const observer = new IntersectionObserver(entries => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('animate-visible');
-              observerRef.unobserve(entry.target);
+            } else {
+              entry.target.classList.remove('animate-visible');
             }
           });
         }, { threshold: 0.16 });
