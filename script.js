@@ -20,6 +20,7 @@ if (themeBtn) {
 document.addEventListener('DOMContentLoaded', () => {
   const cardPopables = document.querySelectorAll('.card-popable');
   const pageFrame = document.querySelector('.page-frame');
+  const hero = document.querySelector('.hero');
   
   cardPopables.forEach(card => {
     card.addEventListener('mouseenter', () => {
@@ -33,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.summary-section, .section-block').forEach(section => {
         section.classList.add('faded-out');
       });
+      if (hero) {
+        hero.classList.add('faded-out');
+      }
     });
     
     card.addEventListener('mouseleave', () => {
@@ -41,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.summary-section, .section-block').forEach(section => {
         section.classList.remove('faded-out');
       });
+      if (hero) {
+        hero.classList.remove('faded-out');
+      }
     });
   });
 
