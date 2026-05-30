@@ -16,7 +16,34 @@ if (themeBtn) {
   });
 }
 
+// Add pop-up hover effects for card-popable elements
 document.addEventListener('DOMContentLoaded', () => {
+  const cardPopables = document.querySelectorAll('.card-popable');
+  const pageFrame = document.querySelector('.page-frame');
+  
+  cardPopables.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      pageFrame.classList.add('card-popable-active');
+      cardPopables.forEach(c => {
+        if (c !== card) {
+          c.classList.add('faded-out');
+        }
+      });
+      // Also fade other sections
+      document.querySelectorAll('.summary-section, .section-block').forEach(section => {
+        section.classList.add('faded-out');
+      });
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      pageFrame.classList.remove('card-popable-active');
+      cardPopables.forEach(c => c.classList.remove('faded-out'));
+      document.querySelectorAll('.summary-section, .section-block').forEach(section => {
+        section.classList.remove('faded-out');
+      });
+    });
+  });
+
   const animatedElements = document.querySelectorAll('.animate');
 
   if (!('IntersectionObserver' in window)) {
